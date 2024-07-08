@@ -6,7 +6,7 @@ POST http://localhost:3000/events
 Content-Type: application/json
 
 {
-    "name": "Novo evento 2",
+    "name": "Novo evento",
     "description": "Este é um novo evento",
     "date": "2024-07-31T00:00:00",
     "price": 100
@@ -41,7 +41,7 @@ POST http://localhost:3000/events/{{eventId}}/spots
 Content-Type: application/json
 
 {
-    "name": "A2"
+    "name": "A1"
 }
 
 ###
@@ -50,6 +50,7 @@ Content-Type: application/json
 ###
 POST http://localhost:3000/events/{{eventId}}/reserve
 Content-Type: application/json
+X-Api-Token: 123
 
 {
     "spots": ["{{spotName}}"],
